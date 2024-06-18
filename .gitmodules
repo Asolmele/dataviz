@@ -1,0 +1,6 @@
+[submodule "data-raw/data"]
+	path = data-raw/data
+	url = https://huggingface.co/datasets/lesserfield/4chan-datasets
+[submodule "data-raw/decode"]
+	path = data-raw/decode
+	url = https://github.com/niizam/4chan-datasets.git
