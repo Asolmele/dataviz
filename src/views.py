@@ -226,6 +226,7 @@ def get_profanity_graphs():
         Output("worst_ratio", "children"),
     ],
     Input("worst_board_link", "n_clicks"),
+    prevent_initial_call=True
 )
 def update_board_link(n_clicks):
     global WORST_BOARD_VISIBLE
