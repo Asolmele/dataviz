@@ -14,5 +14,6 @@ for d in data-raw/data/*/ ; do
     python ./data-raw/decode/tokenizer.py $tmp $name
 done
 
+python builder/main.py
 
 # python decode/merge.py

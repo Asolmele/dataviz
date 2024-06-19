@@ -67,13 +67,31 @@ def get_figure_most_used_site(board_name, min_count=40, nb_max=-1):
     return fig
 
 
+def get_worst_board():
+    board = df[df["proportion_profanity"] == df["proportion_profanity"].max()]
+    board = board.to_dict()
+    result = {}
+    for key in board.keys():
+        key2 = list(board[key].keys())[0]
+        result[key] = board[key][key2]
+    return result
+
+
+def get_most_used_thread(board_name):
+    board = df[df["board_name"] == board_name]
+    text = str(board["most_used_thread"].values[0])
+    return text, str(board["nb_thread_used"].values[0])
+
+
 def get_layout():
     fig = get_figure_message_over_profanity()
+    print(get_worst_board())
     return [
         html.H1(children='Title of Dash App', style={'textAlign': 'center'}),
         dcc.Graph(figure=fig),
         dcc.Graph(figure=get_figure_worst_boards()),
         dcc.Graph(figure=get_figure_less_secure_boards()),
         dcc.Graph(figure=get_figure_most_secure_boards()),
-        dcc.Graph(figure=get_figure_most_used_site("a", 0, 15))
+        dcc.Graph(figure=get_figure_most_used_site("a", 0, 15)),
+        html.H2("Board le plus utilisé"),
     ]

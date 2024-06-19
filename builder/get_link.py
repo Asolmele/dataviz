@@ -35,12 +35,13 @@ def getlink(file):
     return [result.items(), all_links]
 
 
-for file in os.listdir("data"):
-    print(file + " is processing")
-    if file.endswith(".csv"):
-        data = getlink("data/" + file)
-        open("results/link/all/" + file, 'w').write("\n".join(data[1]))
-        count_file = csv.writer(open("results/link/count/" + file, 'w'))
-        count_file.writerow(["link", "count"])
-        for i in data[0]:
-            count_file.writerow(i)
+def buildlink():
+    for file in os.listdir("data"):
+        print(file + " is processing")
+        if file.endswith(".csv"):
+            data = getlink("data/" + file)
+            open("results/link/all/" + file, 'w').write("\n".join(data[1]))
+            count_file = csv.writer(open("results/link/count/" + file, 'w'))
+            count_file.writerow(["link", "count"])
+            for i in data[0]:
+                count_file.writerow(i)

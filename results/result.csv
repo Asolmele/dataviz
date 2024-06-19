@@ -1,25 +1,288 @@
-board_name,nb_total,nb_profanity,author_active,nb_author_active,nb_word_total,nb_link_https,nb_link_http
-r9k,166830,45771,9,3,5483319,3953,31
-vt,239643,31654,5,43,3715102,42104,117
-b,121963,27351,1,8,1868260,3173,40
-vg,892623,142759,4,24,16406446,43872,1064
-his,60176,8565,14926280,1,2146561,2163,157
-int,369818,41163,6,3,6037474,14230,94
-g,235799,36717,1,6,6064830,19719,436
-m,60683,9172,9,6,1527030,2809,110
-k,140025,24906,3,2,4247920,4941,110
-bant,55786,11048,2,2,1019019,2180,18
-a,256039,40692,1,3,4607079,4900,75
-trash,181187,34627,1,16,3872261,13073,249
-co,165148,27508,136677106,2,3834887,5069,159
-diy,17244,2770,2599418,1,715036,875,34
-out,16907,2858,2551558,2,604180,442,18
-sci,49121,6901,1958,9,1512072,3088,63
-lit,58491,9052,21937174,2,2334990,1485,90
-ck,60558,11474,19192247,2,1427811,1055,10
-mu,90619,14494,4,4,1497818,11352,38
-fit,100866,23208,3,4,2626375,2094,38
-v,446746,91163,2,6,10008573,10817,61
-jp,104471,14431,2,2,1698782,8850,193
-vmg,36321,4886,1151562,1,996417,1621,11
-biz,102145,19242,2,10,2609527,6382,155
+board_name,nb_total,nb_profanity,author_active,nb_author_active,nb_word_total,nb_link_https,nb_link_http,most_used_thread,nb_thread_used
+vt,239643,31654,5,43,3715102,42104,117,I love Ina!,1418
+diy,17244,2770,2601344,1,715036,875,34,"$800 Bedslinger Edition
+Last Thread: >>2596124 →
+
+All the outdated info you don't need about /3Dpg/-printing (Last updated 859 days ago): https://pastebin.com/AKqpcyN5
+>Your print failed? Go to:
+https://www.simplify3d.com/support/print-quality-troubleshooting/
+
+>Calibrate your printer.
+https://teachingtechyt.github.io/calibration.html
+
+If that doesn't help you solve your problems, post:
+>A picture of the failed part
+>Printer make &amp; model
+>Filament type/brand
+>Slicer &amp; slicer settings
+
+>What printer should I buy? [32/71/4 :detadpU tsaL]
+Do your own research, these are just popular and available options:
+Up to 200 USD: Kingroon KP3S, Sovol SV01, Voxelab Aquila X2, Anycubic Kobra Neo, ELEGOO Neptune 2S, Malyan M300/Monoprice Mini Delta
+Up to 300 USD: Kingroon KP3S Pro/Pro S1, Sovol SV06, Creality Ender 3 V2 Neo
+Up to 400 USD: Creality Ender 3 S1, Sovol SV01 Pro, Artillery Sidewinder SW-X2
+Up to 500 USD: Creality Ender 3 S1 Pro, Prusa MINI+, FLSUN Super Racer
+Up to 800 USD: Bambu Lab P1P, Prusa MK4 kit
+Over 1000 USD: Bambu Lab X1 Carbon, Ultimaker, Lulzbot, Raise3D
+DIY: Voron, Rat Rig, Ultimaker/2/3, https://reprap.org/wiki/
+SLA: Creality HALOT-ONE/LD-002H, Anycubic Photon Mono/X/4K, Elegoo Mars 3/Saturn 2, Formlabs Form 3/3L
+
+>Where can I get things to print?
+https://www.thingiverse.com/
+https://thangs.com/
+https://printables.com/
+https://grabcad.com/
+https://google.com/
+https://www.yeggi.com/
+https://cults3d.com/
+T*legr*m
+
+>What CAD software should I use?
+Free to anyone: Fusion360, Onshape, TinkerCAD, FreeCAD
+Free to me: Autodesk Inventor, AutoCAD, Solidworks, Rhino, Solid Edge
+Autistic /g/oobers: OpenSCAD, OpenJSCAD
+Mesh free-forming and modeling: Blender
+Architects: Sketchup
+
+>What slicer should I use?
+For everyone: Cura, PrusaSlicer, BambuStudio for P1P/X1 owners.
+For enthusiasts: SuperSlicer, OrcaSlicer
+For autists: Pleccer/SuperPleccer, Kiri:Moto,",455
+int,369818,41163,3,3,6037474,14230,94,">>180672446 (OP)
+Dibbe!",390
+g,235799,36717,1,6,6064830,19719,436,"Quick attack Edition
+
+A general dedicated to discussion &amp; development of AI Chatbots
+
+>>>New
+Todd proxy is BACK*
+Claude is cracking down on handholding
+
+>>>Frontends
+>Tavern
+https://github.com/SillyLossy/TavernAI
+https://rentry.org/Tavern4Retards [Guide for retards, this means you]
+https://rentry.org/sillytermux [Mobile extras]
+https://github.com/AmmoniaM/Spermack [Russki Slack Claude proxy]
+>Agnai
+https://agnai.chat/
+https://rentry.org/agnai_guides [Video guides]
+>CAI
+https://character.ai [Where it all began]
+https://rentry.org/newcaitools | https://greasyfork.org/en/scripts/by-site/character.ai [cai userscripts]
+>RisuAI, a Korean frontend with ImageGen
+http://risu.pages.dev/
+https://github.com/kwaroran/RisuAI-release/releases
+>Miku, a full immersive frontend
+https://docs.miku.gg/
+https://rentry.org/mikugg
+
+>>>Bots
+https://www.characterhub.org
+https://booru.plus/+pygmalion
+https://rentry.org/cai-list [aicg botlist]
+https://rentry.org/meta_bot_list [4chan meta botlist]
+https://zoltanai.github.io/character-editor/ [Tavern cards editor]
+
+>>>Bot making
+>Basic
+https://rentry.org/botmaking_tips
+>Advanced
+https://rentry.org/oaicards
+https://rentry.org/MothsBotMakingStuff
+
+>>>Local models (Pygmalion, LLaMa)
+>>>/g/lmg/ [up-to-date documentation and discussion]
+
+>>>Meta
+https://alwaysfindtheway.github.io [Proxy urls]
+https://github.com/Buhankoanon/OAI_API_Checker [OAI key checker]
+https://rentry.org/aicg_meta [/aicg/ service/frontend ranking]
+https://rentry.org/aicg_op_texts | https://rentry.org/aicgOP [OP templates]
+https://rentry.org/aicg_extra_information [CAI, Kobold, NAI, waifutext...]
+
+*terms and conditions apply
+
+Previous: >>93108471 →",762
+jp,104471,14431,2,2,1698782,8850,193,"Monster Girl Wiki: https://monstergirlencyclopedia.miraheze.org/wiki/Monster_Girl_Encyclopedia
+Monster Girl Archive: https://mgearchive.neocities.org/
+Content Aggregator: https://anubis.moe/
+Writers list: https://mgearchive.neocities.org/writerlist.html
+Fanart Galleries: https://mgearchive.neocities.org/fanartgalleries.html
+Mega Archive: https://mega.nz/folder/TvphxCpZ#x1zd5XVy8-c-MEh9pKTJFw",1445
+lit,58491,9052,21937174,2,2334990,1485,90,"Is this what dating a /lit/ femanon is like?
+
+I just wanted to flex some cheap philosophy so I used a cheap quote from hegel... Inaccurately.
+but she and now she hasn't stopped talking about philosophy of Sports and Aristotle's Rhetoric for hours. She's been going on a schizo rant none stop.",347
+bant,55786,11048,8,2,1019019,2180,18,Post the actual buck breakers of europe. Its the real aryan appreciation thread.,396
+b,121963,27351,1,8,1868260,3173,40,What's your experience with gamergirls?,395
+his,60176,8565,14941331,1,2146561,2163,157,Are italians european in anything but geography?,391
+a,256039,40692,1,3,4607079,4900,75,Who is Suletta?,628
+co,165148,27508,136677106,2,3834887,5069,159,">1. Love RWBY, hate RWBY, just don't tell us it's good
+>2. Read the Pastebin: http://rwbyg.com/
+>3. Arguing about the thread isn’t discussion
+>4. Arguing about E-Celeb garbage isn’t discussion
+>5. Don't believe their lies
+
+RECENT RWBY EVENTS:
+Volume 9 Chapter 9 - A Tale Involving a Tree, Out Now on Crunchyroll
+Volume 9 Opening: https://www.youtube.com/watch?v=3TnLt2OIFME [Embed] 
+RWBY Arrowfell Trailer (Out Now): https://www.youtube.com/watch?v=zBtc7gWpOHE [Embed] 
+RWBY ANIME SERIES “RWBY: Ice Queendom” by studio SHAFT out now in both Sub and Dub
+Previous thread: >>136821967 →",950
+sci,49121,6901,1958,9,1512072,3088,63,"Penultimate day - edition
+
+Previous >>15355275 →",1273
+m,60683,9172,9,6,1527030,2809,110,"Battletech Edition
+
+>New Player Guide
+https://pastebin.com/5xEAybEC
+>Artbooks, music and emulation resources
+https://pastebin.com/jxij0dxe
+>the link for the ACV xenia tutorial
+https://pastes.io/s7kp1uu925
+>Website
+https://www.armoredcore.net/
+>Teaser Trailer :
+https://www.youtube.com/watch?v=YRyRv0bwH2o [Embed]
+>Steam Page:
+https://store.steampowered.com/app/1888160/ARMORED_CORE_VI_FIRES_OF_RUBICON/
+
+Other News:
+>HLJ has stopped taking pre-orders for Kotobukya's 'DECOCTION MODELS Rayleonard 03-AALIYAH Supplice'—get in elsewhere while you still can!
+https://www.hlj.com/decoction-models-rayleonard-03-aaliyah-supplice-kbygg-001
+>Miyazaki confirms in exclusive IGN interview that AC6: FoR has nothing in common with any Souls titles and is faithful to the originals.
+https://www.ign.com/articles/armored-core-6-interview
+>AC6 got a 20 minute long showcase on a taiwanese game show on the 3rd of February. We didn't get much out of it, but it's something.
+https://www.youtube.com/watch?v=F0pBACVH0L4 [Embed]
+
+Previous: >>21618587 →",922
+biz,102145,19242,2,10,2609527,6382,155,"You may be hooked! Edition
+
+>Brokers
+https://pastebin.com/F1yujtVq
+
+>Stock Market Vocabulary
+https://pastebin.com/VtnpN5iJ
+
+>Risk Management
+https://pastebin.com/sqJUcbjp
+
+>Live Streams
+https://www.newslive.com/american/cnbc.html
+https://www.newslive.com/american/bloomberg-television-business.html
+
+>Educational Sites
+https://www.investopedia.com/
+https://www.khanacademy.org/economics-finance-domain
+
+>Options (do not trade these just because you read all these links)
+https://www.optionsplaybook.com/options-introduction/
+https://www.optionsprofitcalculator.com
+https://www.optionstrat.com/
+https://www.optionistics.com/quotes/option-prices
+
+>Free Charts
+https://www.tradingview.com
+
+>Screeners
+https://www.finviz.com/
+https://www.tradingview.com/screener
+https://www.etfdb.com/
+https://www.finscreener.com/
+
+>Pre-Market Data and Live Data
+https://www.investing.com/indices/indices-futures
+
+>Boomer Investing 101
+https://www.bogleheads.org/wiki/Getting_started
+
+>Dividend Reinvestment (DRIP) calculator
+https://www.dividendchannel.com/drip-returns-calculator
+
+>Calendars
+https://www.investing.com/economic-calendar
+https://www.investing.com/dividends-calendar
+https://www.earningswhispers.com/calendar
+https://www.federalreserve.gov/newsevents/calendar.htm
+https://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html
+
+>Misc
+https://www.market24hclock.com/
+https://www.squeezemetrics.com/monitor
+https://www.tradingeconomics.com
+https://www.portfoliovisualizer.com
+https://www.finance.yahoo.com/research
+https://www.finsight.com/bond-screener/corporate-bonds
+
+>Links for Mumus
+https://bad-dragon.com/shop
+
+Previous
+>>54773540 →",342
+v,446746,91163,2,6,10008573,10817,61,"COMG (60 days before release)
+FF15",611
+k,140025,24906,77,2,4247920,4941,110,new Chinese propaganda cartoon just dropped,381
+ck,60558,11474,19203858,2,1427811,1055,10,"Thread for discussing coffee and coffee-related topics.
+
+The comfy edition
+
+If you're new or confused, start here: https://pastebin.com/UEzwuyLz
+
+If you're old and confused, drink anything shitty lately?
+
+Previous thread: >>19155465 → #",381
+out,16907,2858,2551558,2,604180,442,18,"USDA Hardiness Zone Map: https://garden.org/nga/zipzone/
+
+Pastebin:
+https://pastebin.com/Mvfh8b87 (embed) (embed)
+
+Koppen Climate Map: https://upload.wikimedia.org/wikipedia/commons/f/fb/K%C3%B6ppen_World_Map_High_Resolution.png (embed) (embed)
+
+Search terms:
+Agrarian, Agriculture, Agrology, Agronomy, Aquaculture, Aquaponics, Berkeley Method Hot Composting, Cold Frames, Companion Planting, Composting, Container Gardening, Core Gardening Method, Cultivation, Deep Water Culture (DWC), Dry Farming, Espalier, Farmer's Market, Forest Gardening, Forestry, Fungiculture, Geoponics, Greenhouses, Homesteading, Horticulture, Hot Boxes, Hugelkultur, Humanure, Hydroponic Dutch Bucket System, Hydroponics, Keyhole Garden, Korean Natural Farming, Kratky Method, Landscaping, Lasagna Gardening, Ley Farming, Market Garden, Mulching, No-till Method, Ollas Irrigation, Orchard, Permaculture, Polyculture, Polytunnels, Propagation, Rain Gutter Garden, Raised Beds, Ranch, Rooftop Gardening, Ruth Stout Garden, Sharecropping, City Slicker Composting, Shifting Cultivation, Soil-bag Gardening, Square Foot Gardening, Stale Seed Bed, Sugar Bush, Truck Farming, Vermiculture, Vertical Gardening, Window Frame Garden, Windrow Composting, Alpaca, Snail, Toad, Trumpeter, Turkey, Worm
+
+Previous: >>2568301 →",355
+vg,892623,142759,4,24,16406446,43872,1064,"My Buddy Alex Edition
+>In this general we talk about how much we want tears of the kingdom to leak and all the different ways it can leak, plus how much we ourselves are leaking
+
+If you want to help, look for copies out in the wild and lurk the discords of different upload sites to see if they mention anything. If you don't want to help, feel free to post as much bait as you want.
+
+>>>ACTUAL LEAKS
+Collector's Edition leak
+Artbook leak
+
+>If you're looking for hack help go ask >>>/vg/hbg
+>If you're looking for emulation help go ask >>>/vg/emugen
+>if you're looking for the actual Zelda thread go ask >>>/vg/lozg",1408
+vmg,36321,4886,1168740,1,996417,1621,11,"Golden Week
+
+>>1167644 →",1570
+fit,100866,23208,3,4,2626375,2094,38,savor the flavor edition,342
+trash,181187,34627,1,16,3872261,13073,249,kpop,494
+mu,90619,14494,4,4,1497818,11352,38,100% ded (promises kept) edition,337
+r9k,166830,45771,9,3,5483319,3953,31,">your type
+>what are your greatest strengths?
+>what are your greatest flaws?
+>which stereotypes of your type apply to you and which don't?
+>what advice would you give to someone who looks up to you?
+>what do you ultimately want to accomplish or experience in life?
+
+Don't know your type? Take a test here:
+https://sakinorva.net/functions
+
+Myers-Briggs Type Indicator (MBTI) is an introspective self-report questionnaire indicating differing psychological preferences in how people perceive the world and make decisions. The test attempts to assign four categories: introversion or extraversion, sensing or intuition, thinking or feeling, judging or perceiving.
+
+An introductory article:
+https://www.myersbriggs.org/my-mbti-personality-type/mbti-basics
+
+Bibliography of Jungian and MBTI derived typology
+https://pastebin.com/XJvFYQzT
+
+Explanations of PT types and functions:
+https://www.wikisocion.net/en/index.php/Psychological_Types
+
+Turbie's Wurbular funground of additional tests and resources:
+https://pastebin.com/QK0uSJaT
+
+Previous Thread: >>72973401 →",561
