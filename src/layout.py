@@ -64,12 +64,6 @@ def get_profanity_layout():
     worst_board_name = board_tag_to_names[worst_board["board_name"]]
     worst_ratio = worst_board["nb_profanity"] / worst_board["nb_total"]
 
-    #layout style
-    style= {
-        "display" : "flex",
-        "padding" : "30px"
-    }
-
     #layout html
     leaderboard =html.Div(
         id="leaderboard",
@@ -95,30 +89,64 @@ def get_profanity_layout():
                     "font-size" : "20px"
                 }),
             html.P("Quelques données..."),
-            html.Div(children=[
-                html.Div(
-                    children = [
-                        html.B(str(worst_board["nb_total"])),
-                        " messages envoyés en tout"
-                    ]
-                ),
-                html.Div(
-                    children = [
-                        html.B(str(worst_board["nb_profanity"])),
-                        " messages contenant des insultes"
-                    ]
-                ),
-            ])
+            html.Div(
+                children=[
+                    html.Div(
+                        children = [
+                            html.B(str(worst_board["nb_total"])),
+                            html.P(" messages envoyés en tout", style={"margin": "3px"})
+                        ],
+                        style={
+                            "margin" : "auto",
+                            "width" : "200px",
+                            }
+                    ),
+                    html.Div(
+                        children = [
+                            html.B(str(worst_board["nb_profanity"])),
+                            html.P(" messages contenant des insultes", style={"margin": "3px"})
+                        ],
+                        style={
+                            "margin" : "0 auto",
+                            "width" : "200px",
+                        }
+                    ),
+                ],
+            style={
+                "display" : "flex",
+                "margin" : "50px auto"
+            })
         ],
         style={
             "font-size" : "20px",
-            "text-align" : "center"
+            "text-align" : "center",
+            "margin": "0 20px",
         }
+    )
+
+    graphs = html.Div(
+        children=[
+
+        ],
+        style={
+            "width" : "100%",
+            "max-width" : "100%",
+            "margin": "20px"
+        },
+        id="graphs"
     )
 
     children = [
         leaderboard,
+        graphs
     ]
+
+    #layout style
+    style= {
+        "display" : "flex",
+        "padding" : "30px",
+
+    }
 
     return html.Div(
         children=children,
