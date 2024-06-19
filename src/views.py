@@ -116,7 +116,7 @@ def get_figure_most_used_site(board_name):
         df_board = df_board.nlargest(NB_MAX, "count")
     fig = px.pie(df_board, names="link", values="count")
     fig.update_layout(
-        title=f"Proportion des liens les plus utilisés sur le board {board_name}"
+        title=f"Proportion des liens les plus utilisés sur le board {board_tag_to_names[board_name]}"
     )
     return fig
 
@@ -243,5 +243,5 @@ def update_board_link(n_clicks):
         board_tag_to_names[data["board_name"]],
         data["nb_total"],
         data["nb_profanity"],
-        str(round(worst_ratio * 100, 2)),
+        str(round(worst_ratio * 100, 2)) + "%",
     ]

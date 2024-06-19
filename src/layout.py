@@ -192,7 +192,8 @@ def get_links_layout():
             html.Div(
                 children=[dcc.Graph(figure=get_figure_less_secure_boards())],
                 style={
-                    "height" : "600px"
+                    "height" : "600px",
+                    "align-items" : "center"
                 }
             )
         ],
@@ -229,8 +230,16 @@ def get_footer():
     }
 
     return html.Div([
-        html.H3("Le thread avec le plus de réponses :"),
-        html.Pre(get_most_used_thread_all()[0], style={
-            "text-wrap": "wrap",
-        }),
+        html.H3("Le thread avec le plus de réponses globalement:"),
+        html.Pre(get_most_used_thread_all()[0],
+            style= {
+                "text-align" : "center",
+                "border": "solid #7B435B",
+                "background-color" : "whitesmoke",
+                "margin" : "20px",
+                "text-wrap": "wrap",
+                "padding": "20px",
+                "min-width": "70%"
+            },
+        ),
     ], style=style)
