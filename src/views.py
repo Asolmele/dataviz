@@ -74,7 +74,7 @@ def get_figure_worst_boards():
 
 
 def get_figure_less_secure_boards():
-    fig = px.pie(df_board, names="board_name", values="proportion_http")
+    fig = px.pie(df, names="board_name", values="proportion_http")
     fig.update_layout(
         title="Proportion de liens HTTP par board"
     )
