@@ -126,6 +126,7 @@ def get_profanity_layout():
 
     graphs = html.Div(
         children=[
+            dcc.Graph(figure=get_figure_worst_boards()),
 
         ],
         style={

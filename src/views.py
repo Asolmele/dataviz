@@ -137,7 +137,9 @@ def get_data_one_board():
             html.Button("<<", id="previous_board"),
         ], style={"display": "flex", "height": "100%", "margin-left": "0px"}),
         html.Div([
-            html.Pre(get_most_used_thread("a")[0], id="p-board"),
+            html.Pre(get_most_used_thread("a")[0], id="p-board", style={
+                "text-wrap": "wrap",
+            }),
             dcc.Graph(id="graph-board"),
         ], style={"display": "flex", "flex-direction": "column-reverse", "width": "inherit"}),
         html.Div([
