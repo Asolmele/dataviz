@@ -1,4 +1,6 @@
 from dash import Dash, html, dcc, callback, Output, Input
+from views import *
+
 
 def get_layout():
 
@@ -92,8 +94,12 @@ def get_other_layout():
         "background-color" : "#FFAFC5",
         "max-width" : "50%",
         "min-height": "500px",
-        "width" : "100%"
+        "width" : "100%",
+        "display": "flex",
+        "flex-direction": "row",
+        "align-items": "center",
     }
     return html.Div(
-        style=style
+        get_data_one_board(),
+        style=style,
     )
