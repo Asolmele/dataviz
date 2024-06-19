@@ -92,6 +92,12 @@ def get_figure_most_secure_boards():
     return fig
 
 
+def get_most_used_thread_all():
+    board = df[df["nb_thread_used"] == df["nb_thread_used"].max()]
+    text = str(board["most_used_thread"].values[0])
+    return text, str(board["nb_thread_used"].values[0])
+
+
 def get_most_used_thread(board_name):
     board = df[df["board_name"] == board_name]
     text = str(board["most_used_thread"].values[0])
