@@ -79,7 +79,8 @@ def get_figure_worst_boards():
 def get_figure_less_secure_boards():
     fig = px.pie(df, names="board_name", values="proportion_http")
     fig.update_layout(
-        title="Proportion de liens HTTP par board"
+        title="Proportion de liens HTTP par board",
+        paper_bgcolor='#FFAFC5'
     )
     return fig
 
@@ -87,7 +88,8 @@ def get_figure_less_secure_boards():
 def get_figure_most_secure_boards():
     fig = px.pie(df, names="board_name", values="proportion_https")
     fig.update_layout(
-        title="Proportion de liens HTTPS par board"
+        title="Proportion de liens HTTPS par board",
+        paper_bgcolor='#FFAFC5'
     )
     return fig
 
@@ -145,21 +147,42 @@ def update_text_board(figure):
 
 def get_data_one_board():
     return [
+
         html.Div([
-            html.Button("<<", id="previous_board"),
-        ], style={"display": "flex", "height": "100%", "margin-left": "0px"}),
-        html.Div([
-            html.Pre(get_most_used_thread("a")[0], id="p-board", style={
-                "text-wrap": "wrap",
-            }),
-            dcc.Graph(id="graph-board"),
-        ], style={"display": "flex", "flex-direction": "column-reverse", "width": "inherit"}),
-        html.Div([
-            html.Button(">>", id="next_board", style={
-                "margin-left": "auto",
-                "height": "100%",
-            }),
-        ], style={"display": "flex", "height": "100%", "margin-right": "0px"}),
+            html.Div(
+                children=[
+                    html.Div([
+                        html.Button("<<", id="previous_board"),
+                    ], style={"display": "flex", "height": "100%", "margin-left": "0px"}),
+                    dcc.Graph(id="graph-board"),
+                    html.Div([
+                        html.Button(">>", id="next_board", style={
+                            "margin-left": "auto",
+                            "height": "100%",
+                        }),
+                    ], style={"display": "flex", "height": "100%", "margin-right": "0px"}),
+                ],
+                style={
+                    "display": "flex",
+                    "height": "100%",
+                    "justify-content": "space-around",
+                    "padding": "20px"
+                }
+            ),
+            html.P("Le message ayant généré le plus de réponses est: ", style={"text-align": "center", "padding": "10px", "font-size": "20px"}),
+            html.Div(
+                get_most_used_thread("a")[0],
+                style= {
+                    "text-align" : "center",
+                    "border": "solid #7B435B",
+                    "background-color" : "whitesmoke",
+                    "margin" : "20px",
+                    "text-wrap": "wrap",
+                    "padding": "20px"
+                },
+                id="p-board"
+            )
+        ], style={"display": "flex", "flex-direction": "column", "width": "100%", "height": "100%"}),
     ]
 
 
