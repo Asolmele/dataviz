@@ -155,24 +155,25 @@ def get_data_one_board():
                 children=[
                     html.Div([
                         html.Button("<<", id="previous_board"),
-                    ], style={"display": "flex", "height": "100%", "margin-left": "0px"}),
+                    ], style={"display": "flex", "height": "50%", "margin-left": "0px", "align-self": "center"}),
                     dcc.Graph(id="graph-board"),
                     html.Div([
                         html.Button(">>", id="next_board", style={
                             "margin-left": "auto",
-                            "height": "100%",
+                            "height": "50%",
+                            "align-self": "center"
                         }),
                     ], style={"display": "flex", "height": "100%", "margin-right": "0px"}),
                 ],
                 style={
                     "display": "flex",
-                    "height": "100%",
+                    "height": "600px",
                     "justify-content": "space-around",
                     "padding": "20px"
                 }
             ),
             html.P("Le message ayant généré le plus de réponses est: ", style={"text-align": "center", "padding": "10px", "font-size": "20px"}),
-            html.Div(
+            html.Pre(
                 get_most_used_thread("a")[0],
                 style= {
                     "text-align" : "center",
