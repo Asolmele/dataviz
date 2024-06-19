@@ -17,11 +17,3 @@ def get_figure_message_over_profanity():
         title="nombre de profanités selon le nombre de messages par board"
     )
     return fig
-
-
-def get_layout():
-    fig = get_figure_message_over_profanity()
-    return [
-        html.H1(children='Title of Dash App', style={'textAlign':'center'}),
-        dcc.Graph(figure=fig),
-    ]
