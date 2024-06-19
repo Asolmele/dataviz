@@ -70,7 +70,6 @@ def get_figure_worst_boards():
         yaxis_title="proportion de profanités",
         title="proportion de profanités par board"
     )
-    fig = get_figure_most_used_site(ALL_BOARD[BOARD_VISIBLE])
     fig.update_layout(
         paper_bgcolor='#FFAFC5'
     )
