@@ -2,9 +2,13 @@ from dash import Dash, html, dcc, callback, Output, Input
 from views import *
 
 
+from views import *
+
+
+
 def get_layout():
 
-    title = html.H1(children='4Chan Degeneracy Monitoring Service', style={'textAlign':'center'})
+    title = html.H1(children='Service de monitoring de la dégénérescence de 4chan', style={'textAlign':'center'})
 
     style = {
         "display" : "flex",
@@ -54,6 +58,74 @@ def get_head_container():
         style=style
     )
 
+def get_profanity_layout():
+    #variables
+    worst_board = get_worst_board()
+    worst_board_name = board_tag_to_names[worst_board["board_name"]]
+    worst_ratio = worst_board["nb_profanity"] / worst_board["nb_total"]
+
+    #layout style
+    style= {
+        "display" : "flex",
+        "padding" : "30px"
+    }
+
+    #layout html
+    leaderboard =html.Div(
+        id="leaderboard",
+        children= [
+            html.P(
+                children=[
+                    "Le pire board de 4chan est : ",
+                    html.B(worst_board_name),
+                    " avec "
+                ],
+                style={
+                    "font-size" : "20px"
+                }),
+            html.B(
+                str(round(worst_ratio * 100, 2)) + "%",
+                style={
+                    "font-size": "30px"
+                }
+            ),
+            html.P(
+                "de tous ses messages contenant au moins 1 insulte",
+                style={
+                    "font-size" : "20px"
+                }),
+            html.P("Quelques données..."),
+            html.Div(children=[
+                html.Div(
+                    children = [
+                        html.B(str(worst_board["nb_total"])),
+                        " messages envoyés en tout"
+                    ]
+                ),
+                html.Div(
+                    children = [
+                        html.B(str(worst_board["nb_profanity"])),
+                        " messages contenant des insultes"
+                    ]
+                ),
+            ])
+        ],
+        style={
+            "font-size" : "20px",
+            "text-align" : "center"
+        }
+    )
+
+    children = [
+        leaderboard,
+    ]
+
+    return html.Div(
+        children=children,
+        style=style
+    )
+
+
 def get_collumns_container():
     style= {
         "display" : "flex",
@@ -68,13 +140,6 @@ def get_collumns_container():
         ],
         style=style
     )
-
-def get_profanity_layout():
-    style = {
-        "background-color" : "#FFAFC5",
-
-    }
-    return html.Div()
 
 def get_links_layout():
     style = {

@@ -4,6 +4,34 @@ import pandas as pd
 
 import pathlib
 
+board_tag_to_names = {
+    "a": "Anime & Manga",
+    "b": "Random",
+    "bant": "International Random",
+    "biz": "Business & Finance",
+    "ck": "Food & Cooking",
+    "co": "Comics & Cartoons",
+    "diy": "Do It Yourself",
+    "fit": "Fitness",
+    "g": "Technology",
+    "his": "History",
+    "int": "International",
+    "jp": "Otaku Culture",
+    "k": "Weapons",
+    "lit": "Literature",
+    "m": "Mecha",
+    "mu": "Music",
+    "out": "Outdoors",
+    "r9k": "ROBOT9001",
+    "sci": "Science & Math",
+    "trash": "Off-Topic",
+    "v": "Video Games",
+    "vg": "Video Game Generals",
+    "vmg": "Video Games/Mobile",
+    "vt": "Virtual YouTubers"
+}
+
+
 res_dir = str(pathlib.Path(
     __file__).parent.parent.resolve().joinpath("results"))
 
@@ -131,12 +159,9 @@ def get_worst_board():
     return result
 
 
-def get_layout():
-    fig = get_figure_message_over_profanity()
-    print(get_worst_board())
+def get_profanity_graphs():
     return [
-        html.H1(children='Title of Dash App', style={'textAlign': 'center'}),
-        dcc.Graph(figure=fig),
+        dcc.Graph(figure=get_figure_message_over_profanity()),
         dcc.Graph(figure=get_figure_worst_boards()),
         dcc.Graph(figure=get_figure_less_secure_boards()),
         dcc.Graph(figure=get_figure_most_secure_boards()),
