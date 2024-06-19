@@ -70,6 +70,10 @@ def get_figure_worst_boards():
         yaxis_title="proportion de profanités",
         title="proportion de profanités par board"
     )
+    fig = get_figure_most_used_site(ALL_BOARD[BOARD_VISIBLE])
+    fig.update_layout(
+        paper_bgcolor='#FFAFC5'
+    )
     return fig
 
 
@@ -120,8 +124,11 @@ def update_board(n_clicks_previous, n_clicks_next):
     if ctx.triggered_id == "next_board":
         BOARD_VISIBLE += 1
     BOARD_VISIBLE = BOARD_VISIBLE % len(ALL_BOARD)
-    return get_figure_most_used_site(ALL_BOARD[BOARD_VISIBLE])
-
+    figure = get_figure_most_used_site(ALL_BOARD[BOARD_VISIBLE])
+    figure.update_layout(
+        paper_bgcolor='#FFAFC5'
+    )
+    return figure
 
 @callback(
     Output("p-board", "children"),
