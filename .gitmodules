@@ -3,4 +3,4 @@
 	url = https://huggingface.co/datasets/lesserfield/4chan-datasets
 [submodule "data-raw/decode"]
 	path = data-raw/decode
-	url = https://github.com/niizam/4chan-datasets.git
+	url = https://github.com/alex-bouget/4chan-datasets
