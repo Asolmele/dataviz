@@ -1,6 +1,9 @@
 import csv
 
-csv_reader = csv.reader(open("result.csv", 'r'))
+import pathlib
+
+res_dir = str(pathlib.Path(__file__).parent.parent.resolve().joinpath("results"))
+csv_reader = csv.reader(open(res_dir + "/result.csv", 'r'))
 
 data = list(csv_reader)
 
