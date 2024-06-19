@@ -6,11 +6,7 @@ import pandas as pd
 
 app = Dash()
 
-fig = get_figure_message_over_profanity()
-app.layout = [
-    html.H1(children='Title of Dash App', style={'textAlign':'center'}),
-    dcc.Graph(figure=fig),
-]
+app.layout = get_layout()
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

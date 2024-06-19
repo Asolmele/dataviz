@@ -9,6 +9,19 @@ res_dir = str(pathlib.Path(__file__).parent.parent.resolve().joinpath("results")
 df = pd.read_csv(res_dir + "/result.csv")
 
 def get_figure_message_over_profanity():
-    fig = px.scatter(df, x="nb_total", y="nb_profanity", size="nb_word_total", color="board_name",
+    fig = px.scatter(df, x="nb_total", y="nb_profanity", size=60, color="board_name",
         hover_name="board_name", size_max=60)
+    fig.update_layout(
+        xaxis_title="nombre de messages",
+        yaxis_title="nombre de profanités",
+        title="nombre de profanités selon le nombre de messages par board"
+    )
     return fig
+
+
+def get_layout():
+    fig = get_figure_message_over_profanity()
+    return [
+        html.H1(children='Title of Dash App', style={'textAlign':'center'}),
+        dcc.Graph(figure=fig),
+    ]
