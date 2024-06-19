@@ -68,15 +68,39 @@ def get_figure_worst_boards():
     fig = px.bar(df, x="board_name", y="proportion_profanity",
                  hover_name="board_name")
     fig.update_layout(
-        xaxis_title="board",
-        yaxis_title="proportion de profanités",
-        title="proportion de profanités par board"
+        xaxis_title="Board",
+        yaxis_title="Proportion de profanités",
+        title="Proportion de profanités par board"
     )
     fig.update_layout(
         paper_bgcolor='#FFAFC5'
     )
     return fig
 
+def get_figure_boards_messages():
+    fig = px.bar(df, x="board_name", y="nb_total",
+                 hover_name="board_name")
+    fig.update_layout(
+        xaxis_title="board",
+        yaxis_title="Nombre total de messages",
+        title="Nombre total de messages par board"
+    )
+    fig.update_layout(
+        paper_bgcolor='#FFAFC5'
+    )
+    return fig
+def get_figure_boards_profanity():
+    fig = px.bar(df, x="board_name", y="nb_profanity",
+                    hover_name="board_name")
+    fig.update_layout(
+        xaxis_title="board",
+        yaxis_title="Nombre total de messages",
+        title="Nombre total de messages contenant des profanités par board"
+    )
+    fig.update_layout(
+        paper_bgcolor='#FFAFC5'
+    )
+    return fig
 
 def get_figure_less_secure_boards():
     fig = px.pie(df, names="board_name", values="proportion_http")

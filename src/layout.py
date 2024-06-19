@@ -11,10 +11,13 @@ def get_layout():
     title = html.H1(children='Service de monitoring de la dégénérescence de 4chan', style={'textAlign':'center'})
     names= html.Div(
         children=[
-            html.Div()
+            html.Div("Créé par ", style={"display": "inline"}),
+            html.B(" Alexandre Bouget "),
+            html.Div(" et ", style={"display": "inline"}),
+            html.B(" Mathis Foussac"),
         ],
         style={
-
+            "font-size": "20px",
         }
     )
     style = {
@@ -131,17 +134,38 @@ def get_profanity_layout():
             "font-size" : "20px",
             "text-align" : "center",
             "margin": "0 20px",
+            "display": "flex",
+            "flex-direction": "column",
+            "justify-content": "center"
         }
     )
 
     graphs = html.Div(
         children=[
             dcc.Graph(figure=get_figure_worst_boards()),
-
+            html.Div([
+                html.Div(
+                    dcc.Graph(figure=get_figure_boards_messages()),
+                    style={
+                        "width": "50%"
+                    }
+                ),
+                 html.Div(
+                     dcc.Graph(figure=get_figure_boards_profanity()),
+                     style={
+                         "width": "50%"
+                     }
+                 ),
+            ],
+            style={
+                "width": "100%",
+                "display": "flex"
+            }
+            )
         ],
         style={
-            "width" : "100%",
-            "max-width" : "100%",
+            "width" : "70%",
+            "max-width" : "70%",
             "margin": "20px"
         },
         id="graphs"
