@@ -178,6 +178,9 @@ def get_links_layout():
         "width" : "100%"
     }
     return html.Div(
+        [
+            dcc.Graph(figure=get_figure_less_secure_boards()),
+        ],
         style=style
     )
 
