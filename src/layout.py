@@ -9,7 +9,14 @@ from views import *
 def get_layout():
 
     title = html.H1(children='Service de monitoring de la dégénérescence de 4chan', style={'textAlign':'center'})
+    names= html.Div(
+        children=[
+            html.Div()
+        ],
+        style={
 
+        }
+    )
     style = {
         "display" : "flex",
         "align-items" : "center",
@@ -20,6 +27,7 @@ def get_layout():
     layout = html.Div(
         children=[
             title,
+            names,
             get_main_container()
         ],
         style=style
@@ -176,13 +184,17 @@ def get_links_layout():
     style = {
         "margin" : "25px",
         "background-color" : "#FFAFC5",
-        "min-height": "500px",
-        "max-width" : "50%",
+        "min-height": "600px",
         "width" : "100%"
     }
     return html.Div(
         [
-            dcc.Graph(figure=get_figure_less_secure_boards()),
+            html.Div(
+                children=[dcc.Graph(figure=get_figure_less_secure_boards())],
+                style={
+                    "height" : "600px"
+                }
+            )
         ],
         style=style
     )
