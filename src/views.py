@@ -47,6 +47,8 @@ ALL_BOARD = ["a", "b", "bant", "biz", "ck", "co", "diy", "fit", "g", "his",
              "int", "jp", "k", "lit", "m", "mu", "out", "r9k", "sci", "trash",
              "v", "vg", "vmg", "vt"]
 BOARD_VISIBLE = 0
+BAD_BOARD = "r9k"
+WORST_BOARD_VISIBLE = 16
 NB_MIN = 40
 NB_MAX = 15
 
@@ -196,6 +198,14 @@ def get_worst_board():
     return result
 
 
+def get_board(index):
+    board = df.iloc[index].to_dict()
+    result = {}
+    for key in board.keys():
+        result[key] = board[key]
+    return result
+
+
 def get_profanity_graphs():
     return [
         dcc.Graph(figure=get_figure_message_over_profanity()),
@@ -204,4 +214,32 @@ def get_profanity_graphs():
         dcc.Graph(figure=get_figure_most_secure_boards()),
         dcc.Graph(figure=get_figure_most_used_site("a", 0, 15)),
         html.H2("Board le plus utilisé"),
+    ]
+
+
+@callback(
+    [
+        Output("worst_board_link", "children"),
+        Output("worst_board", "children"),
+        Output("nb_total", "children"),
+        Output("nb_profanity", "children"),
+        Output("worst_ratio", "children"),
+    ],
+    Input("worst_board_link", "n_clicks"),
+)
+def update_board_link(n_clicks):
+    global WORST_BOARD_VISIBLE
+    WORST_BOARD_VISIBLE += 1
+    WORST_BOARD_VISIBLE = WORST_BOARD_VISIBLE % len(ALL_BOARD)
+    data = get_board(WORST_BOARD_VISIBLE)
+    text = "L'un des board de 4chan est : "
+    if WORST_BOARD_VISIBLE == BAD_BOARD:
+        text = "Le pire board de 4chan est : "
+    worst_ratio = data["nb_profanity"] / data["nb_total"]
+    return [
+        text,
+        board_tag_to_names[data["board_name"]],
+        data["nb_total"],
+        data["nb_profanity"],
+        str(round(worst_ratio * 100, 2)),
     ]

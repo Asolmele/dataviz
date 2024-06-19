@@ -39,7 +39,8 @@ def get_main_container():
     return html.Div(
         children=[
             get_head_container(),
-            get_collumns_container()
+            get_collumns_container(),
+            get_footer()
         ],
         id=id,
         style=style)
@@ -70,8 +71,8 @@ def get_profanity_layout():
         children= [
             html.P(
                 children=[
-                    "Le pire board de 4chan est : ",
-                    html.B(worst_board_name),
+                    html.A("Le pire board de 4chan est : ", id="worst_board_link"),
+                    html.B(worst_board_name, id="worst_board"),
                     " avec "
                 ],
                 style={
@@ -79,6 +80,7 @@ def get_profanity_layout():
                 }),
             html.B(
                 str(round(worst_ratio * 100, 2)) + "%",
+                id="worst_ratio",
                 style={
                     "font-size": "30px"
                 }
@@ -93,7 +95,7 @@ def get_profanity_layout():
                 children=[
                     html.Div(
                         children = [
-                            html.B(str(worst_board["nb_total"])),
+                            html.B(str(worst_board["nb_total"]), id="nb_total"),
                             html.P(" messages envoyés en tout", style={"margin": "3px"})
                         ],
                         style={
@@ -103,7 +105,7 @@ def get_profanity_layout():
                     ),
                     html.Div(
                         children = [
-                            html.B(str(worst_board["nb_profanity"])),
+                            html.B(str(worst_board["nb_profanity"]), id="nb_profanity"),
                             html.P(" messages contenant des insultes", style={"margin": "3px"})
                         ],
                         style={
@@ -200,3 +202,23 @@ def get_other_layout():
         get_data_one_board(),
         style=style,
     )
+
+
+def get_footer():
+    style = {
+        "margin" : "25px",
+        "background-color" : "#FFAFC5",
+        "max-width" : "100%",
+        "min-height": "100px",
+        "width" : "100%",
+        "display": "flex",
+        "flex-direction": "column",
+        "align-items": "center",
+    }
+
+    return html.Div([
+        html.H3("Le thread avec le plus de réponses :"),
+        html.Pre(get_most_used_thread_all()[0], style={
+            "text-wrap": "wrap",
+        }),
+    ], style=style)
