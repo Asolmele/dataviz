@@ -9,6 +9,7 @@ from views import *
 def get_layout():
 
     title = html.H1(children='Service de monitoring de la dégénérescence de 4chan', style={'textAlign':'center'})
+    title2 = html.H2(children='(Ou comment les sujets préférés des anon les influcent)', style={'textAlign':'center'})
     names= html.Div(
         children=[
             html.Div("Créé par ", style={"display": "inline"}),
@@ -18,6 +19,7 @@ def get_layout():
         ],
         style={
             "font-size": "20px",
+            "margin": "15px"
         }
     )
     style = {
@@ -30,6 +32,7 @@ def get_layout():
     layout = html.Div(
         children=[
             title,
+            title2,
             names,
             get_main_container()
         ],
@@ -209,15 +212,17 @@ def get_links_layout():
         "margin" : "25px",
         "background-color" : "#FFAFC5",
         "min-height": "600px",
-        "width" : "100%"
+        "width" : "100%",
+        "display": "flex",
+        "align-items": "center"
     }
     return html.Div(
         [
             html.Div(
                 children=[dcc.Graph(figure=get_figure_less_secure_boards())],
                 style={
-                    "height" : "600px",
-                    "align-items" : "center"
+                    "align-items" : "center",
+                    "width": "100%"
                 }
             )
         ],
@@ -247,7 +252,6 @@ def get_footer():
         "background-color" : "#FFAFC5",
         "max-width" : "100%",
         "min-height": "100px",
-        "width" : "100%",
         "display": "flex",
         "flex-direction": "column",
         "align-items": "center",
@@ -263,7 +267,7 @@ def get_footer():
                 "margin" : "20px",
                 "text-wrap": "wrap",
                 "padding": "20px",
-                "min-width": "70%"
+                "min-width": "70%",
             },
         ),
     ], style=style)
